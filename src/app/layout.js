@@ -1,8 +1,9 @@
 import { IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import NavComponent from "./components/topnav";
-import SideNav from "./components/sidenav";
-import DocsBackground from "./(doc)/installation/DocsBackground";
+import NavComponent from "@/components/layout/topnav";
+import SideNav from "@/components/layout/sidenav";
+import DocsBackground from "@/components/docs/DocsBackground";
+import SmoothScrollProvider from "@/components/ui/scrollsmoothprovider";
 
 const geistSans = IBM_Plex_Mono({
   variable: "--font-plex-mono",
@@ -27,15 +28,17 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-screen flex flex-col">
-        <NavComponent />
-        <div className="flex flex-1 min-h-screen mt-14">
-          <SideNav />
-          <div className="flex flex-1 min-h-screen ml-[15%] justify-between">
-            <DocsBackground />
-            {children}
-            <DocsBackground />
+        <SmoothScrollProvider>
+          <NavComponent />
+          <div className="flex flex-1 min-h-screen mt-14">
+            <SideNav />
+            <div className="flex flex-1 min-h-screen ml-[15%] justify-between">
+              <DocsBackground />
+              {children}
+              <DocsBackground />
+            </div>
           </div>
-        </div>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

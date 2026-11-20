@@ -42,7 +42,7 @@ export const SideNavData = [
         items: [
             {
                 id: 0,
-                name: 'aspect-ratio',
+                name: 'button',
                 href: '/'
             },
             {
@@ -85,6 +85,17 @@ export const SideNavData = [
                 id: 3,
                 name: 'gap',
                 href: '/'
+            },
+        ]
+    },
+    {
+        id: 4,
+        title: 'COMPONENTS',
+        items: [
+            {
+                id: 0,
+                name: 'Liquid Blob Hero',
+                href: '/installation/components/banner'
             },
         ]
     },

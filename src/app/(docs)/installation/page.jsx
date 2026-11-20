@@ -1,13 +1,13 @@
-import { IntroductionData, PrerequisitesData } from "@/app/data/data";
-import { InstallTabs } from "@/app/(doc)/installation/components/install-tabs";
+import { IntroductionData, PrerequisitesData } from "@/data/data";
+import { InstallTabs } from "@/components/ui/install-tabs";
 
 export default function InstalltionPage() {
   return (
     <main className="px-10 py-5 ">
       <div className="text-gray-500 font-plex text-[14px]">
-        Documentation / Installation
+        Documentation / <span className="text-gray-200">Installation</span>
       </div>
-      <h1 className="text-[clamp(1rem,5vw,1.8rem)] font-bold font-inter text-gray-200">
+      <h1 className="text-[clamp(1rem,5vw,1.8rem)] pt-4 font-bold font-inter text-gray-200">
         Installation
       </h1>
 
